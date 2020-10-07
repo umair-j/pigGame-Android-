@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#93868F"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rightLayout"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.334">
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/leftLayout"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.004"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.334">
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/totalScore"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="#17163C"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="#C5C5C5"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.328" />
+
+    <TextView
+        android:id="@+id/tempScore"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="57dp"
+        android:background="#17163C"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="#C5C5C5"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalScore"
+        app:layout_constraintVertical_bias="0.025" />
+
+    <Button
+        android:id="@+id/rollDice"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:background="#500A0A"
+        android:gravity="center"
+        android:onClick="rollDice"
+        android:text="Roll"
+        android:textColor="#919191"
+        android:textColorHighlight="#E42525"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.752" />
+
+    <Button
+        android:id="@+id/holdDice"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:background="#09550C"
+        android:gravity="center"
+        android:onClick="hold"
+        android:text="Hold"
+        android:textColor="#ACACAC"
+        android:textColorHighlight="#41BD26"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rollDice"
+        app:layout_constraintVertical_bias="0.271" />
+
+    <TextView
+        android:id="@+id/total2"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="#17163C"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="#C5C5C5"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.328" />
+
+    <TextView
+        android:id="@+id/tempScore2"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="#17163C"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="#C5C5C5"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.497" />
+
+    <TextView
+        android:id="@+id/dieRoll"
+        android:layout_width="141dp"
+        android:layout_height="96dp"
+        android:gravity="center"
+        android:textColor="#D5D5D5"
+        android:textSize="86sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/rollDice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.604" />
+
+    <TextView
+        android:id="@+id/tr1"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:background="#000000"
+        android:gravity="center"
+        android:text="THIS ROUND"
+        android:textColor="#D6D6D6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.44" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:background="#000000"
+        android:gravity="center"
+        android:text="TOTAL"
+        android:textColor="#D6D6D6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.276" />
+
+    <TextView
+        android:id="@+id/tr2"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:background="#000000"
+        android:gravity="center"
+        android:text="THIS ROUND"
+        android:textColor="#D6D6D6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.44" />
+
+    <TextView
+        android:id="@+id/to2"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:background="#000000"
+        android:gravity="center"
+        android:text="TOTAL"
+        android:textColor="#D6D6D6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.276" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
