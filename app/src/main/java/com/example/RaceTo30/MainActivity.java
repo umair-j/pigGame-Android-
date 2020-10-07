@@ -1,4 +1,4 @@
-package com.example.piggame;
+package com.example.RaceTo30;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -18,15 +18,34 @@ public class MainActivity extends AppCompatActivity {
     public int tempTotal1 = 0;
     public int tempTotal2 = 0;
     public static int user = 0;
+    public int winner;
+    boolean gameOver = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
     }
-        public void hold(View view){
+
+
+    public void check(View view){
+        if (totalScore1 >= 30) {
+            winner = 0;
+            gameOver = true;
+        } else if (totalScore2 >= 30) {
+            winner = 1;
+            gameOver = true;
+        }
+        if (gameOver == true) {
+            winDisplay(view);
+        }
+    }
+
+
+    public void hold(View view){
+            check(view);
+
+
             changeBack(view);
             if(user==0 && tempTotal1!=0){
                 totalScore1+=tempTotal1;
@@ -39,6 +58,9 @@ public class MainActivity extends AppCompatActivity {
                 user=0;
 
             }
+
+
+
             TextView tt1 = (TextView)findViewById(R.id.totalScore);
             String StrTotal = Integer.toString(totalScore1);
             tt1.setText(StrTotal);
@@ -48,6 +70,55 @@ public class MainActivity extends AppCompatActivity {
 
             changeBack(view);
 
+        }
+        public void resetGame(View view){
+
+            TextView display = (TextView)findViewById(R.id.fin);
+            display.setText("");
+
+            Button b1 = (Button)findViewById(R.id.holdDice);
+            b1.setEnabled(true);
+            Button b2 = (Button)findViewById(R.id.rollDice);
+            b2.setEnabled(true);
+
+
+            totalScore1 = 0;
+            totalScore2 = 0;
+            tempTotal1 = 0;
+            tempTotal2 = 0;
+            user = 0;
+            winner = -1;
+            gameOver = false;
+            TextView temp1 = (TextView)findViewById(R.id.tempScore);
+            temp1.setText("0");
+
+            TextView temp2 = (TextView)findViewById(R.id.tempScore2);
+            temp2.setText("0");
+
+            TextView ttt1 = (TextView)findViewById(R.id.totalScore);
+
+            ttt1.setText("0");
+            TextView ttt2 = (TextView)findViewById(R.id.total2);
+
+            ttt2.setText("0");
+
+            TextView initialdie = (TextView)findViewById(R.id.dieRoll);
+            initialdie.setText("");
+
+        }
+
+        public void winDisplay(View view){
+            TextView display = (TextView)findViewById(R.id.fin);
+            if(winner==0) {
+                display.setText("PLAYER 1 WINS!");
+            }
+            else if(winner==1){
+                display.setText("PLAYER 2 WINS!");
+            }
+            Button b1 = (Button)findViewById(R.id.holdDice);
+            b1.setEnabled(false);
+            Button b2 = (Button)findViewById(R.id.rollDice);
+            b2.setEnabled(false);
         }
 
         public void changeBack(View view){
@@ -67,6 +138,7 @@ public class MainActivity extends AppCompatActivity {
 
         public void rollDice(View view)
         {
+            check(view);
             changeBack(view);
             TextView t = (TextView)findViewById(R.id.dieRoll);
 
