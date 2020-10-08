@@ -140,15 +140,15 @@ public class MainActivity extends AppCompatActivity {
         public void changeBack(View view){
             if(user==0) {
                 TextView left = (TextView) findViewById(R.id.leftLayout);
-                left.setBackgroundColor(Color.parseColor("#FF5E525A"));
+                left.setBackgroundColor(Color.parseColor("#1C4C55"));
                 TextView right = (TextView) findViewById(R.id.rightLayout);
-                right.setBackgroundColor(Color.parseColor("#93868F"));
+                right.setBackgroundColor(Color.parseColor("#2A6873"));
             }
             else if(user==1){
                 TextView right = (TextView) findViewById(R.id.rightLayout);
-                right.setBackgroundColor(Color.parseColor("#FF5E525A"));
+                right.setBackgroundColor(Color.parseColor("#1C4C55"));
                 TextView left = (TextView) findViewById(R.id.leftLayout);
-                left.setBackgroundColor(Color.parseColor("#93868F"));
+                left.setBackgroundColor(Color.parseColor("#2A6873"));
             }
     }
 

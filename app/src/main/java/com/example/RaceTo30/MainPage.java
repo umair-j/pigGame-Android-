@@ -8,38 +8,36 @@ import android.view.View;
 
 public class MainPage extends AppCompatActivity {
 
-    String opt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
-        launch();
-    }
-
-    public void launch(){
-        Bundle b = getIntent().getExtras();
-        if(b==null){
-            opt = "30";
-        }
-        else {
-            Intent i = getIntent();
-            String lim1 = i.getStringExtra("choice");
-            opt = lim1;
-        }
 
     }
 
-    public void goToGame(View view){
-        Intent i = new Intent(this,MainActivity.class);
-        i.putExtra("limit", opt);
+    public void goTo30(View view) {
+
+        Intent i = new Intent(this, MainActivity.class);
+        i.putExtra("limit", "30");
+
         startActivity(i);
 
     }
-    public void goToModes(View view){
-        Intent i = new Intent(this,GameModes.class);
+    public void goTo50(View view) {
+
+        Intent i = new Intent(this, MainActivity.class);
+        i.putExtra("limit", "50");
 
         startActivity(i);
-    }
 
+    }
+    public void goTo100(View view) {
+
+        Intent i = new Intent(this, MainActivity.class);
+        i.putExtra("limit", "100");
+
+        startActivity(i);
+
+    }
 }
