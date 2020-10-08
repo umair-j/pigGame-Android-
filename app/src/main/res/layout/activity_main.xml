@@ -8,7 +8,7 @@
     android:onClick="resetGame"
     tools:context=".MainActivity">
 
-    <RelativeLayout
+    <TextView
         android:id="@+id/rightLayout"
         android:layout_width="200dp"
         android:layout_height="300dp"
@@ -17,12 +17,12 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.334">
+        app:layout_constraintVertical_bias="0.334"
 
-    </RelativeLayout>
+    />
 
 
-    <RelativeLayout
+    <TextView
         android:id="@+id/leftLayout"
         android:layout_width="200dp"
         android:layout_height="300dp"
@@ -31,9 +31,9 @@
         app:layout_constraintHorizontal_bias="0.004"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.334">
+        app:layout_constraintVertical_bias="0.334"
 
-    </RelativeLayout>
+    />
 
     <TextView
         android:id="@+id/totalScore"
@@ -55,7 +55,6 @@
         android:id="@+id/tempScore"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_marginTop="57dp"
         android:background="#17163C"
         android:gravity="center"
         android:text="0"
@@ -65,8 +64,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.099"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/totalScore"
-        app:layout_constraintVertical_bias="0.025" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.488" />
 
     <Button
         android:id="@+id/rollDice"
@@ -132,7 +131,7 @@
         app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497" />
+        app:layout_constraintVertical_bias="0.487" />
 
     <TextView
         android:id="@+id/dieRoll"
