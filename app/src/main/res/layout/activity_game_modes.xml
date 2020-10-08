@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#93868F"
+    tools:context="com.example.RaceTo30.GameModes">
+
+
+    <Button
+        android:id="@+id/apply"
+        android:layout_width="160dp"
+        android:layout_height="100dp"
+        android:background="#181B22"
+        android:onClick="applyChange"
+        android:text="APPLY CHANGES"
+        android:textColor="#989797"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rTo100"
+        app:layout_constraintVertical_bias="0.438" />
+
+    <Button
+        android:id="@+id/rTo30"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:onClick="setVal30"
+        android:text="RACETO30"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.154" />
+
+    <Button
+        android:id="@+id/rTo50"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:onClick="setVal50"
+        android:text="RACETO50"
+        app:layout_constraintBottom_toTopOf="@+id/rTo100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rTo30"
+        app:layout_constraintVertical_bias="0.494" />
+
+    <Button
+        android:id="@+id/rTo100"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:onClick="setVal100"
+        android:text="RACETO100"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.479" />
+</androidx.constraintlayout.widget.ConstraintLayout>

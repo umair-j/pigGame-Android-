@@ -2,6 +2,7 @@ package com.example.RaceTo30;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -20,19 +21,30 @@ public class MainActivity extends AppCompatActivity {
     public static int user = 0;
     public int winner;
     boolean gameOver = false;
+    int limitInt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        launch();
+
+
     }
 
+        public void launch(){
 
+            Intent i = getIntent();
+            String lim = i.getStringExtra("limit");
+            limitInt = Integer.parseInt(lim);
+
+        }
     public void check(View view){
-        if (totalScore1 >= 30) {
+        if (totalScore1 >= limitInt) {
             winner = 0;
             gameOver = true;
-        } else if (totalScore2 >= 30) {
+        } else if (totalScore2 >= limitInt) {
             winner = 1;
             gameOver = true;
         }
