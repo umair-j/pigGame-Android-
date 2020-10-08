@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
     public int winner;
     boolean gameOver = false;
     int limitInt;
+    String noOfPlayers;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,11 +38,19 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+
+
         public void launch(){
 
             Intent i = getIntent();
-            String lim = i.getStringExtra("limit");
+            Bundle extras = i.getExtras();
+            String lim = extras.getString("limit");
+            String password_string = extras.getString("players");
+
+
             limitInt = Integer.parseInt(lim);
+
 
         }
     public void check(View view){

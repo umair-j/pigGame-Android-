@@ -57,4 +57,39 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.558" />
+
+    <Button
+        android:id="@+id/p1"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:background="#AFAFAF"
+        android:hapticFeedbackEnabled="false"
+        android:onClick="p1mode"
+        android:text="1 PLAYER"
+        android:textColor="#2B2A2A"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.145"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/race100"
+        app:layout_constraintVertical_bias="0.343" />
+
+    <Button
+        android:id="@+id/p2"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:background="#AFAFAF"
+        android:onClick="p2mode"
+        android:text="2 PLAYER"
+        android:textColor="#2B2A2A"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.854"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/race100"
+        app:layout_constraintVertical_bias="0.343" />
 </androidx.constraintlayout.widget.ConstraintLayout>
