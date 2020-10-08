@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     public int winner;
     boolean gameOver = false;
     int limitInt;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -135,15 +138,15 @@ public class MainActivity extends AppCompatActivity {
 
         public void changeBack(View view){
             if(user==0) {
-                RelativeLayout left = (RelativeLayout) findViewById(R.id.leftLayout);
+                TextView left = (TextView) findViewById(R.id.leftLayout);
                 left.setBackgroundColor(Color.parseColor("#FF5E525A"));
-                RelativeLayout right = (RelativeLayout) findViewById(R.id.rightLayout);
+                TextView right = (TextView) findViewById(R.id.rightLayout);
                 right.setBackgroundColor(Color.parseColor("#93868F"));
             }
             else if(user==1){
-                RelativeLayout right = (RelativeLayout) findViewById(R.id.rightLayout);
+                TextView right = (TextView) findViewById(R.id.rightLayout);
                 right.setBackgroundColor(Color.parseColor("#FF5E525A"));
-                RelativeLayout left = (RelativeLayout) findViewById(R.id.leftLayout);
+                TextView left = (TextView) findViewById(R.id.leftLayout);
                 left.setBackgroundColor(Color.parseColor("#93868F"));
             }
     }
