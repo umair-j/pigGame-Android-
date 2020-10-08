@@ -58,10 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void hold(View view){
-            check(view);
 
-
-            changeBack(view);
             if(user==0 && tempTotal1!=0){
                 totalScore1+=tempTotal1;
                 tempTotal1=0;
@@ -82,6 +79,10 @@ public class MainActivity extends AppCompatActivity {
             TextView tt2 = (TextView)findViewById(R.id.total2);
             String StrTotal2 = Integer.toString(totalScore2);
             tt2.setText(StrTotal2);
+
+            check(view);
+
+
 
             changeBack(view);
 
