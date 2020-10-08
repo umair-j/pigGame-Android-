@@ -1,7 +1,5 @@
 package com.example.RaceTo30;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -9,13 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
 import org.w3c.dom.Text;
-
 import java.util.Random;
-
 public class MainActivity extends AppCompatActivity {
-
     public int totalScore1 = 0;
     public int totalScore2 = 0;
     public int tempTotal1 = 0;
@@ -25,20 +19,24 @@ public class MainActivity extends AppCompatActivity {
     boolean gameOver = false;
     int limitInt;
     String noOfPlayers;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
         launch();
-
-
     }
-
-
+        public int secondPlayer(){
+            int res = 0;
+            Random r = new Random();
+            int n = r.nextInt(6) + 1;
+            if(n<=3) {
+                res = 1;
+            }
+            else if(n>3) {
+                res = 2;
+            }
+            return res;
+        }
 
 
         public void launch(){
@@ -46,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
             Intent i = getIntent();
             Bundle extras = i.getExtras();
             String lim = extras.getString("limit");
-            String password_string = extras.getString("players");
+            noOfPlayers = extras.getString("players");
 
 
             limitInt = Integer.parseInt(lim);
@@ -73,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
                 totalScore1+=tempTotal1;
                 tempTotal1=0;
                 user = 1;
+                rollDice(view);
             }
             else if(user==1&&tempTotal2!=0){
                 totalScore2+=tempTotal2;
@@ -164,6 +163,7 @@ public class MainActivity extends AppCompatActivity {
 
         public void rollDice(View view)
         {
+
             check(view);
             changeBack(view);
             TextView t = (TextView)findViewById(R.id.dieRoll);
@@ -175,11 +175,13 @@ public class MainActivity extends AppCompatActivity {
             if(num == 6 && user == 0){
                tempTotal1 = 0;
                user = 1;
+               if(noOfPlayers.equals("1")){
+                   rollDice(view);
+               }
             }
             else if(num != 6 && user == 0){
                 tempTotal1+=num;
             }
-
 
             else if(num == 6 && user == 1){
                 tempTotal2 = 0;
@@ -187,6 +189,14 @@ public class MainActivity extends AppCompatActivity {
             }
             else if(num != 6 && user == 1){
                 tempTotal2+=num;
+                if(noOfPlayers.equals("1")) {
+                    int a = secondPlayer();
+                    if (a ==1) {
+                        hold(view);
+                    } else {
+                        rollDice(view);
+                    }
+                }
             }
             TextView tmp1 = (TextView)findViewById(R.id.tempScore);
             String tempStrTotal = Integer.toString(tempTotal1);
