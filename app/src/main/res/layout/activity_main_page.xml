@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1C4C55"
     tools:context="com.example.RaceTo30.MainPage">
 
     <Button
@@ -62,7 +61,7 @@
         android:id="@+id/p1"
         android:layout_width="150dp"
         android:layout_height="100dp"
-        android:background="#AFAFAF"
+        android:background="#CCCCCC"
         android:hapticFeedbackEnabled="false"
         android:onClick="p1mode"
         android:text="1 PLAYER"
@@ -80,7 +79,7 @@
         android:id="@+id/p2"
         android:layout_width="150dp"
         android:layout_height="100dp"
-        android:background="#AFAFAF"
+        android:background="#CCCCCC"
         android:onClick="p2mode"
         android:text="2 PLAYER"
         android:textColor="#2B2A2A"

@@ -3,8 +3,10 @@ package com.example.RaceTo30;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 public class MainPage extends AppCompatActivity {
 
@@ -55,9 +57,13 @@ public class MainPage extends AppCompatActivity {
     public void p1mode(View view){
         noOfPlayers = "1";
         buttonPressed = true;
+        findViewById(R.id.p1).setBackgroundColor(Color.CYAN);
+        findViewById(R.id.p2).setBackgroundColor(Color.LTGRAY);
     }
     public void p2mode(View view){
         noOfPlayers = "2";
         buttonPressed = true;
+        findViewById(R.id.p2).setBackgroundColor(Color.CYAN);
+        findViewById(R.id.p1).setBackgroundColor(Color.LTGRAY);
     }
 }

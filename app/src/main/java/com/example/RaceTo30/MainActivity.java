@@ -190,6 +190,7 @@ public class MainActivity extends AppCompatActivity {
             else if(num != 6 && user == 1){
                 tempTotal2+=num;
                 if(noOfPlayers.equals("1")) {
+
                     int a = secondPlayer();
                     if (a ==1) {
                         hold(view);
