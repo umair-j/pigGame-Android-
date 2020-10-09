@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#224E4A"
     tools:context="com.example.RaceTo30.MainPage">
 
     <Button
